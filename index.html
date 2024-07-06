@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./imagenes/Encriptado icono">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+     <header>
+        <div class="header">
+         <img  class="header__logo" 
+         src="./imagenes/alura.svg" alt="">
+
+        </div>
+    </header>
+    <main>
+        <div class="main"> 
+            <div class="left">
+                <textarea id="ingresoTexto" class="ingreso__texto"
+                placeholder="Ingrese el texto aqui"></textarea>
+
+                <div class="left__footer">
+                     <img src="./imagenes/exclamacion.svg" alt="">
+                      <span class="left__info">Sólo letras minúsculas y sín acento</span>
+
+                         <div class="left__botones">
+                             <button id="botonEncriptar" class="boton__encriptar">Encriptar</button>
+                             <button id="botonDesencriptar" class="boton__desencriptar">Desencriptar</button>
+                         </div> 
+                </div>
+            </div>
+            <div id="right" class="right">
+                <img id="munheco" class="munheco" src="./imagenes/munheco.svg" alt="">
+                <textarea id="mensajeFinal" class="mensaje__final" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p id="rightInfo" class="right__info">Ingresa el texto que desees encriptar o desencriptar</p>
+                 
+                <button id="botonCopiar" class="boton__copiar oculto">Copiar</button>  
+
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer ">
+        <p class="creador">Creado por:Braian Enrique
+            </a>
+        </p>
+        <div>
+            <a href="https://github.com/Braian14" target="_blank">
+                <img class="links" src="./imagenes/github.svg" />
+            </a>
+            
+            <a href="https://www.linkedin.com/in/braian-enrique/" target="_blank">
+                <img class="links" src="./imagenes/linkedin.svg" />
+            </a>
+        </div>
+    </footer>
+  
+    <script src="./js/script.js"></script>
+</body>
+</html>
