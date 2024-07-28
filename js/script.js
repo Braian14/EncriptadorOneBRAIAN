@@ -14,6 +14,7 @@ const rightInfo = document.getElementById("rightInfo")
 
 const right = document.getElementById("right")
 
+const leftInfo = document.getElementById("leftInfo")
 // e - enter
 // o - ober
 // i - imes
@@ -41,7 +42,58 @@ const remplace = (nuevoValor) => {
 }
 
 botonEncriptar.addEventListener('click', () => {
-    const texto = ingresoTexto.value.toLowerCase()
+    
+const texto = ingresoTexto.value; 
+    // console.log(texto);
+    let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`´´ñ+;,\u0300-\u036f']/g, " " )
+    console.log(txt)
+
+    if (texto == ""){
+        leftInfo.style.background = "#0A3871";
+        leftInfo.style.color = "#FFFF";
+        leftInfo.style.fontWeight = "800"
+        leftInfo.textContent = "El campo no debe estar vacío";
+        alert("El campo no debe estar vacío")
+
+        setTimeout(()=>{
+
+            leftInfo.removeAttribute("style");
+
+        },1500);
+    }
+    else if( texto !== txt){
+        leftInfo.style.background = "#0A3871";
+        leftInfo.style.color = "#FFFF";
+        leftInfo.style.fontWeight = "800"
+        leftInfo.textContent = "No se aceptan acentos y caracteres especiales";
+        alert("El texto no debe tener acentos y caracteres especiales");
+        
+    
+        setTimeout(()=>{
+
+            leftInfo.removeAttribute("style");
+           
+
+        },1500);
+        mensajeFinal= ""
+
+    }
+    else if (texto !== texto.toLowerCase()){
+
+        leftInfo.style.background = "#0A3871";
+        leftInfo.style.color = "#FFFF";
+        leftInfo.style.fontWeight = "800"
+        leftInfo.textContent = "El texto debe estar todo en mínuscula";
+        alert("El texto debe estar todo en mínuscula");
+        
+        setTimeout(()=>{
+
+            leftInfo.removeAttribute("style");
+
+        },1500);
+        mensajeFinal= "";
+
+    }
     function encriptar (newText) {
         for(let i = 0; i < remplazar.length; i++){
             if(newText.includes(remplazar[i][0])){
@@ -62,7 +114,57 @@ botonEncriptar.addEventListener('click', () => {
 
 })
 botonDesencriptar.addEventListener("click", () => {
-    const texto = ingresoTexto.value.toLowerCase();
+    const texto = ingresoTexto.value; 
+    // console.log(texto);
+    let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`´´ñ+;,\u0300-\u036f']/g, " " )
+    console.log(txt)
+
+    if (texto == ""){
+        leftInfo.style.background = "#0A3871";
+        leftInfo.style.color = "#FFFF";
+        leftInfo.style.fontWeight = "800"
+        leftInfo.textContent = "El campo no debe estar vacío";
+        alert("El campo no debe estar vacío")
+
+        setTimeout(()=>{
+
+            leftInfo.removeAttribute("style");
+
+        },1500);
+    }
+    else if( texto !== txt){
+        leftInfo.style.background = "#0A3871";
+        leftInfo.style.color = "#FFFF";
+        leftInfo.style.fontWeight = "800"
+        leftInfo.textContent = "No se aceptan acentos y caracteres especiales";
+        alert("El texto no debe tener acentos y caracteres especiales");
+        
+    
+        setTimeout(()=>{
+
+            leftInfo.removeAttribute("style");
+           
+
+        },1500);
+        mensajeFinal= ""
+
+    }
+    else if (texto !== texto.toLowerCase()){
+
+        leftInfo.style.background = "#0A3871";
+        leftInfo.style.color = "#FFFF";
+        leftInfo.style.fontWeight = "800"
+        leftInfo.textContent = "El texto debe estar todo en mínuscula";
+        alert("El texto debe estar todo en mínuscula");
+        
+        setTimeout(()=>{
+
+            leftInfo.removeAttribute("style");
+
+        },1500);
+        mensajeFinal= "";
+
+    }
     function desencriptar(newText) {
         for(let i = 0; i < remplazar.length; i++){
             if(newText.includes(remplazar[i][1])) {
