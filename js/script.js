@@ -49,11 +49,17 @@ const texto = ingresoTexto.value;
     console.log(txt)
 
     if (texto == ""){
-        leftInfo.style.background = "#0A3871";
-        leftInfo.style.color = "#FFFF";
-        leftInfo.style.fontWeight = "800"
-        leftInfo.textContent = "El campo no debe estar vacío";
-        alert("El campo no debe estar vacío")
+        // leftInfo.style.background = "#0A3871";
+        // leftInfo.style.color = "#FFFF";
+        // leftInfo.style.fontWeight = "800"
+        // leftInfo.textContent = "El campo no debe estar vacío";
+        // alert("El campo no debe estar vacío")
+        swal({
+            title: "ERROR",
+            text: "El campo no debe estar vacío",
+            icon: "error",
+            button: "Ok",
+          });
 
         setTimeout(()=>{
 
@@ -62,11 +68,18 @@ const texto = ingresoTexto.value;
         },1500);
     }
     else if( texto !== txt){
-        leftInfo.style.background = "#0A3871";
-        leftInfo.style.color = "#FFFF";
-        leftInfo.style.fontWeight = "800"
-        leftInfo.textContent = "No se aceptan acentos y caracteres especiales";
-        alert("El texto no debe tener acentos y caracteres especiales");
+        // leftInfo.style.background = "#0A3871";
+        // leftInfo.style.color = "#FFFF";
+        // leftInfo.style.fontWeight = "800"
+        // leftInfo.textContent = "No se aceptan acentos y caracteres especiales";
+        // alert("El texto no debe tener acentos y caracteres especiales");
+        swal({
+            title: "ERROR",
+            text: "El texto no debe tener acentos y caracteres especiales",
+            icon: "error",
+            button: "Ok",
+          });
+
         
     
         setTimeout(()=>{
@@ -80,12 +93,18 @@ const texto = ingresoTexto.value;
     }
     else if (texto !== texto.toLowerCase()){
 
-        leftInfo.style.background = "#0A3871";
-        leftInfo.style.color = "#FFFF";
-        leftInfo.style.fontWeight = "800"
-        leftInfo.textContent = "El texto debe estar todo en mínuscula";
-        alert("El texto debe estar todo en mínuscula");
-        
+        // leftInfo.style.background = "#0A3871";
+        // leftInfo.style.color = "#FFFF";
+        // leftInfo.style.fontWeight = "800"
+        // leftInfo.textContent = "El texto debe estar todo en mínuscula";
+        // alert("El texto debe estar todo en mínuscula");
+        swal({
+            title: "ERROR",
+            text: "El texto debe estar todo en mínuscula",
+            icon: "error",
+            button: "Ok",
+          });
+
         setTimeout(()=>{
 
             leftInfo.removeAttribute("style");
@@ -120,11 +139,18 @@ botonDesencriptar.addEventListener("click", () => {
     console.log(txt)
 
     if (texto == ""){
-        leftInfo.style.background = "#0A3871";
-        leftInfo.style.color = "#FFFF";
-        leftInfo.style.fontWeight = "800"
-        leftInfo.textContent = "El campo no debe estar vacío";
-        alert("El campo no debe estar vacío")
+        // leftInfo.style.background = "#0A3871";
+        // leftInfo.style.color = "#FFFF";
+        // leftInfo.style.fontWeight = "800"
+        // leftInfo.textContent = "El campo no debe estar vacío";
+        // alert("El campo no debe estar vacío")
+        swal({
+            title: "ERROR",
+            text: "No hay texto para desencriptar",
+            icon: "error",
+            button: "Ok",
+          });
+        
 
         setTimeout(()=>{
 
@@ -133,11 +159,18 @@ botonDesencriptar.addEventListener("click", () => {
         },1500);
     }
     else if( texto !== txt){
-        leftInfo.style.background = "#0A3871";
-        leftInfo.style.color = "#FFFF";
-        leftInfo.style.fontWeight = "800"
-        leftInfo.textContent = "No se aceptan acentos y caracteres especiales";
-        alert("El texto no debe tener acentos y caracteres especiales");
+        // leftInfo.style.background = "#0A3871";
+        // leftInfo.style.color = "#FFFF";
+        // leftInfo.style.fontWeight = "800"
+        // leftInfo.textContent = "No se aceptan acentos y caracteres especiales";
+        // alert("El texto no debe tener acentos y caracteres especiales");
+        swal({
+            title: "ERROR",
+            text: "El texto no debe tener acentos y caracteres especiales",
+            icon: "error",
+            button: "Ok",
+          });
+
         
     
         setTimeout(()=>{
@@ -151,12 +184,17 @@ botonDesencriptar.addEventListener("click", () => {
     }
     else if (texto !== texto.toLowerCase()){
 
-        leftInfo.style.background = "#0A3871";
-        leftInfo.style.color = "#FFFF";
-        leftInfo.style.fontWeight = "800"
-        leftInfo.textContent = "El texto debe estar todo en mínuscula";
-        alert("El texto debe estar todo en mínuscula");
-        
+        // leftInfo.style.background = "#0A3871";
+        // leftInfo.style.color = "#FFFF";
+        // leftInfo.style.fontWeight = "800"
+        // leftInfo.textContent = "El texto debe estar todo en mínuscula";
+        // alert("El texto debe estar todo en mínuscula");
+        swal({
+            title: "ERROR",
+            text: "El texto debe estar todo en mínuscula",
+            icon: "error",
+            button: "Ok",
+          });
         setTimeout(()=>{
 
             leftInfo.removeAttribute("style");
