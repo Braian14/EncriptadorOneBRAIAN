@@ -55,9 +55,9 @@ const texto = ingresoTexto.value;
         // leftInfo.textContent = "El campo no debe estar vacío";
         // alert("El campo no debe estar vacío")
         swal({
-            title: "ERROR",
-            text: "El campo no debe estar vacío",
-            icon: "error",
+            title: "Oops!",
+            text: "No hay texto para encriptar",
+            icon: "warning",
             button: "Ok",
           });
 
@@ -145,9 +145,9 @@ botonDesencriptar.addEventListener("click", () => {
         // leftInfo.textContent = "El campo no debe estar vacío";
         // alert("El campo no debe estar vacío")
         swal({
-            title: "ERROR",
+            title: "Oops!",
             text: "No hay texto para desencriptar",
-            icon: "error",
+            icon: "warning",
             button: "Ok",
           });
         
