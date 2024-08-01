@@ -41,11 +41,11 @@ const remplace = (nuevoValor) => {
 
 }
 
-botonEncriptar.addEventListener('click', () => {
+botonEncriptar.addEventListener("click", () => {
     
 const texto = ingresoTexto.value; 
     // console.log(texto);
-    let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`´´ñ+;,\u0300-\u036f']/g, " " )
+    let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\A-Z¡@#%^&*()_|}\{[\]>\<:"`´´ñ+;,\u0300-\u036f']/g, " " )
     console.log(txt)
 
     if (texto == ""){
@@ -75,7 +75,7 @@ const texto = ingresoTexto.value;
         // alert("El texto no debe tener acentos y caracteres especiales");
         swal({
             title: "ERROR",
-            text: "El texto no debe tener acentos y caracteres especiales",
+            text: "El texto no debe contener mayúsculas, acentos ni caracteres especiales.",
             icon: "error",
             button: "Ok",
           });
@@ -91,28 +91,9 @@ const texto = ingresoTexto.value;
         mensajeFinal= ""
 
     }
-    else if (texto !== texto.toLowerCase()){
+    
 
-        // leftInfo.style.background = "#0A3871";
-        // leftInfo.style.color = "#FFFF";
-        // leftInfo.style.fontWeight = "800"
-        // leftInfo.textContent = "El texto debe estar todo en mínuscula";
-        // alert("El texto debe estar todo en mínuscula");
-        swal({
-            title: "ERROR",
-            text: "El texto debe estar todo en mínuscula",
-            icon: "error",
-            button: "Ok",
-          });
-
-        setTimeout(()=>{
-
-            leftInfo.removeAttribute("style");
-
-        },1500);
-        mensajeFinal= "";
-
-    }
+    
     function encriptar (newText) {
         for(let i = 0; i < remplazar.length; i++){
             if(newText.includes(remplazar[i][0])){
@@ -135,7 +116,7 @@ const texto = ingresoTexto.value;
 botonDesencriptar.addEventListener("click", () => {
     const texto = ingresoTexto.value; 
     // console.log(texto);
-    let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\¡@#%^&*()_|}\{[\]>\<:"`´´ñ+;,\u0300-\u036f']/g, " " )
+    let txt = texto.normalize("NFD").replace(/[$\.¿\?~!\A-Z¡@#%^&*()_|}\{[\]>\<:"`´´ñ+;,\u0300-\u036f']/g, " " )
     console.log(txt)
 
     if (texto == ""){
@@ -166,7 +147,7 @@ botonDesencriptar.addEventListener("click", () => {
         // alert("El texto no debe tener acentos y caracteres especiales");
         swal({
             title: "ERROR",
-            text: "El texto no debe tener acentos y caracteres especiales",
+            text: "El texto no debe contener mayúsculas, acentos ni caracteres especiales.",
             icon: "error",
             button: "Ok",
           });
@@ -182,27 +163,7 @@ botonDesencriptar.addEventListener("click", () => {
         mensajeFinal= ""
 
     }
-    else if (texto !== texto.toLowerCase()){
-
-        // leftInfo.style.background = "#0A3871";
-        // leftInfo.style.color = "#FFFF";
-        // leftInfo.style.fontWeight = "800"
-        // leftInfo.textContent = "El texto debe estar todo en mínuscula";
-        // alert("El texto debe estar todo en mínuscula");
-        swal({
-            title: "ERROR",
-            text: "El texto debe estar todo en mínuscula",
-            icon: "error",
-            button: "Ok",
-          });
-        setTimeout(()=>{
-
-            leftInfo.removeAttribute("style");
-
-        },1500);
-        mensajeFinal= "";
-
-    }
+    
     function desencriptar(newText) {
         for(let i = 0; i < remplazar.length; i++){
             if(newText.includes(remplazar[i][1])) {
