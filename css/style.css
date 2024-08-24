@@ -46,6 +46,19 @@ font-family: "Inter", sans-serif
     margin-top: 40px;
     
 }
+.header__titulo{
+    margin-top: 40px;
+    width: 90%;
+    font-size: 40px;
+    color:var(--color-blue);
+    font-family: "Inter", sans-serif;
+    /* gap: 90px;   */
+    /* display: flex; */
+    align-items:flex-start;
+    
+    
+
+}
 /* Main */
 .main{
     width: 80.5%;
